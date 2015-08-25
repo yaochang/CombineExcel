@@ -14,7 +14,7 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class Excel 
+public class XLSXExcel 
 {
 	private String filename;
 	private XSSFWorkbook workbook;
@@ -22,7 +22,7 @@ public class Excel
 	private int sheets_cnt;
 	private FileOutputStream fileOut;
 	
-	public Excel(String file) {
+	public XLSXExcel(String file) {
 		try{
 			InputStream ExcelFileToRead = new FileInputStream(file);
 			filename = file;
@@ -38,7 +38,7 @@ public class Excel
 		}
 	}
 	
-	public Excel() {
+	public XLSXExcel() {
 		workbook = null;
 		sheets = null;
 		sheets_cnt = 0;
