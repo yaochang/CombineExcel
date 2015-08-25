@@ -86,7 +86,7 @@ public class XLSExcel
 			sheets_cnt = 10; //default
 			sheets = new HSSFSheet[sheets_cnt];
 			for(int i=0;i<sheets_cnt;i++){
-				sheets[i] = workbook.createSheet();
+				sheets[i] = workbook.getSheetAt(i);
 			}
 			fileOut = new FileOutputStream(file);
 		}catch(Exception e){
@@ -96,13 +96,7 @@ public class XLSExcel
 	}
 	
 	public void saveFile() {
-		try{
-			workbook.write(fileOut);
-			fileOut.flush();
-			fileOut.close();
-		}catch(Exception e){
-			
-		}
+		workbook.write(fileOut);
 	}
 	
 	public void outputall() {

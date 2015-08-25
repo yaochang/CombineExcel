@@ -37,23 +37,19 @@ public class CombineExcelsInTheSameDir {
 	}
 	public static String[] getAllExcelFiles(String dirPath) {
 		File file = new File(dirPath);
-		String[] ret;
 		if(file.exists()){
 			File[] files = file.listFiles();
 			if(files.length == 0){
 				System.out.println("This is an empty folder");
 				return null;
 			}else{
-				ret = new String[files.length];
+				String[] ret = new String[files.length];
 				int index = 0;
 				for(File tmpFile : files){
 					ret[index] = tmpFile.getAbsolutePath();
-					index++;
 				}
 			}
-			return ret;
 		}
-		System.out.println("This folder does not exist");
 		return null;
 	}
 	

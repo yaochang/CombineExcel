@@ -44,7 +44,7 @@ public class CombineExcelsInTheSameDir {
 				System.out.println("This is an empty folder");
 				return null;
 			}else{
-				ret = new String[files.length];
+				String[] ret = new String[files.length];
 				int index = 0;
 				for(File tmpFile : files){
 					ret[index] = tmpFile.getAbsolutePath();
@@ -53,7 +53,6 @@ public class CombineExcelsInTheSameDir {
 			}
 			return ret;
 		}
-		System.out.println("This folder does not exist");
 		return null;
 	}
 	
